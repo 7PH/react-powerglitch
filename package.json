@@ -1,0 +1,30 @@
+{
+  "name": "react-powerglitch",
+  "version": "0.0.1",
+  "types": "./types/lib/index.d.ts",
+  "main": "./lib/react-powerglitch.umd.js",
+  "module": "./lib/react-powerglitch.es.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "powerglitch": "^2.2.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
+    "@vitejs/plugin-react": "^2.1.0",
+    "eslint": "^8.23.1",
+    "eslint-plugin-react": "^7.31.8",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0"
+  }
+}
