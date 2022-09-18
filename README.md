@@ -35,10 +35,10 @@ This React library is a wrapper around [PowerGlitch](https://github.com/7PH/powe
 In order to glitch something, call `useGlitch()` and store its result in a variable.
 ```jsx
 function App() {
-    const glitched = useGlitch();
+    const glitch = useGlitch();
 
     return (
-        <h1>react-powerglitch <span ref={glitched.ref}>🌎</span></h1>
+        <h1>react-powerglitch <span ref={glitch.ref}>🌎</span></h1>
     );
 }
 ```
@@ -48,7 +48,7 @@ One limitation due to React internals is to never place a glitched element as th
 <>
     {/* Do NOT do this */}
     {condition &&
-        <span ref={glitched.ref}>🌎</span>
+        <span ref={glitch.ref}>🌎</span>
     }
 </>
 ```
@@ -58,7 +58,7 @@ Instead, wrap the glitched element with a container:
 <>
     {condition &&
         <div>
-            <span ref={glitched.ref}>🌎</span>
+            <span ref={glitch.ref}>🌎</span>
         </div>
     }
 </>
@@ -69,10 +69,10 @@ Instead, wrap the glitched element with a container:
 You can pass options to customize the glitch effect to `useGlitch`:
 ```jsx
 function App() {
-    const glitched = useGlitch({ glitchTimeSpan: false });
+    const glitch = useGlitch({ glitchTimeSpan: false });
 
     return (
-        <h1>react-powerglitch <span ref={glitched.ref}>🌎</span></h1>
+        <h1>react-powerglitch <span ref={glitch.ref}>🌎</span></h1>
     );
 }
 ```
@@ -91,17 +91,17 @@ The `useGlitch` hook returns an object containing:
 Here is an example:
 ```jsx
 function App() {
-    const glitched = useGlitch({ glitchTimeSpan: false });
+    const glitch = useGlitch({ glitchTimeSpan: false });
 
     return (
         <>
             <div>
-                <h1 ref={glitched.ref}>react-powerglitch 🌎</h1>
+                <h1 ref={glitch.ref}>react-powerglitch 🌎</h1>
             </div>
-            <button onClick={glitched.startGlitch}>
+            <button onClick={glitch.startGlitch}>
                 Start
             </button>
-            <button onClick={glitched.stopGlitch}>
+            <button onClick={glitch.stopGlitch}>
                 Stop
             </button>
         </>
@@ -119,17 +119,17 @@ Your IDE should automatically identify the return type of `useGlitch` to be `Gli
 import { useGlitch, GlitchHandle } from 'react-powerglitch';
 
 function App() {
-    const glitched: GlitchHandle = useGlitch({ glitchTimeSpan: false });
+    const glitch: GlitchHandle = useGlitch({ glitchTimeSpan: false });
 
     return (
         <>
             <div>
-                <h1 ref={glitched.ref}>react-powerglitch 🌎</h1>
+                <h1 ref={glitch.ref}>react-powerglitch 🌎</h1>
             </div>
-            <button onClick={glitched.startGlitch}>
+            <button onClick={glitch.startGlitch}>
                 Start
             </button>
-            <button onClick={glitched.stopGlitch}>
+            <button onClick={glitch.stopGlitch}>
                 Stop
             </button>
         </>

@@ -1,23 +1,22 @@
 import React, { useState } from 'react';
 import { GlitchHandle, useGlitch } from '../lib/';
-import './App.css';
 
 
 function App() {
-    const glitched: GlitchHandle = useGlitch({ hideOverflow: true, glitchTimeSpan: { start: 0, end: 1 } });
+    const glitch: GlitchHandle = useGlitch({ hideOverflow: true, glitchTimeSpan: { start: 0, end: 1 } });
     const [show, setShow] = useState(true);
 
     return (
         <>
             {show &&
                 <div>
-                    <h1 ref={glitched.ref}>react-powerglitch 🌎</h1>
+                    <h1 ref={glitch.ref}>react-powerglitch 🌎</h1>
                 </div>
             }
-            <button onClick={glitched.startGlitch}>
+            <button onClick={glitch.startGlitch}>
                 Start
             </button>
-            <button onClick={glitched.stopGlitch}>
+            <button onClick={glitch.stopGlitch}>
                 Stop
             </button>
             <button onClick={() => setShow(! show)}>
