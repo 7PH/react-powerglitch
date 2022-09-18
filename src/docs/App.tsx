@@ -1,20 +1,27 @@
-import React, { useRef } from 'react';
-import GlitchedElement, { GlitchedElementRef } from '../lib/GlitchedElement';
+import React, { useState } from 'react';
+import { GlitchHandle, useGlitch } from '../lib/';
 import './App.css';
 
+
 function App() {
-    const glitched = useRef<GlitchedElementRef | null>(null);
+    const glitched: GlitchHandle = useGlitch({ hideOverflow: true, glitchTimeSpan: { start: 0, end: 1 } });
+    const [show, setShow] = useState(true);
 
     return (
         <>
-            <GlitchedElement ref={glitched}>
-                <h1>react-powerglitch 🌎</h1>
-            </GlitchedElement>
-            <button onClick={() => glitched.current?.startGlitch()}>
+            {show &&
+                <div>
+                    <h1 ref={glitched.ref}>react-powerglitch 🌎</h1>
+                </div>
+            }
+            <button onClick={glitched.startGlitch}>
                 Start
             </button>
-            <button onClick={() => glitched.current?.stopGlitch()}>
+            <button onClick={glitched.stopGlitch}>
                 Stop
+            </button>
+            <button onClick={() => setShow(! show)}>
+                Toggle
             </button>
         </>
     );
