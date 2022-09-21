@@ -15,10 +15,11 @@
     "/types"
   ],
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "dev": "vite --config vite-docs.config.ts",
+    "build": "vite --config vite-docs.config.ts build && npm run coverage && npx typedoc && vite build",
     "preview": "vite preview",
-    "test": "jest"
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
   "dependencies": {
     "powerglitch": "^2.2.0"
