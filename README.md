@@ -43,10 +43,10 @@ function App() {
 }
 ```
 
-One limitation due to React internals is to never place a glitched element as the direct child of a conditional rendering block. E.g. please **never** do this:
+One limitation, when having the `createContainers` option set to true (which is the default), to not place the glitched element as the direct child of a component or a conditional rendering block. E.g. this will **not** work:
 ```jsx
 <>
-    {/* Do NOT do this */}
+    {/* Will not work */}
     {condition &&
         <span ref={glitch.ref}>🌎</span>
     }
@@ -56,6 +56,7 @@ One limitation due to React internals is to never place a glitched element as th
 Instead, wrap the glitched element with a container:
 ```jsx
 <>
+    {/* Will work */}
     {condition &&
         <div>
             <span ref={glitch.ref}>🌎</span>
@@ -77,7 +78,7 @@ function App() {
 }
 ```
 
-The `options` props accepts any value defined in [the original PowerGlitch library](https://github.com/7PH/powerglitch).
+The `options` props accept any value defined in [the original PowerGlitch library](https://github.com/7PH/powerglitch).
 
 Take a look at the [playground](https://7ph.github.io/powerglitch/#/playground) to visually find out the best glitch options for your element.
 
@@ -85,7 +86,8 @@ Take a look at the [playground](https://7ph.github.io/powerglitch/#/playground) 
 
 The `useGlitch` hook returns an object containing:
 - `ref`: A function ref which you should use on the element you want to glitch, as shown in previous sections.
-- `startGlitch/stopGlitch`: Glitch control functions to start and stop the glitch animation.
+- `startGlitch`: Glitch control functions to start the glitch animation.
+- `stopGlitch`: Glitch control functions to stop the glitch animation.
 - `setOptions`: A function to change the glitch options. This will update the glitched element with the new options.
 
 Here is an example:
