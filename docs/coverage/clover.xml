@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1663759919713" clover="3.2.0">
-  <project timestamp="1663759919714" name="All files">
+<coverage generated="1696163275774" clover="3.2.0">
+  <project timestamp="1696163275774" name="All files">
     <metrics statements="13" coveredstatements="13" conditionals="1" coveredconditionals="1" methods="8" coveredmethods="8" elements="22" coveredelements="22" complexity="0" loc="13" ncloc="13" packages="1" files="1" classes="1"/>
-    <file name="index.ts" path="/home/braymond/WebstormProjects/react-powerglitch/src/lib/index.ts">
+    <file name="index.ts" path="/home/braymond/projects/powerglitch/react-powerglitch/src/lib/index.ts">
       <metrics statements="13" coveredstatements="13" conditionals="1" coveredconditionals="1" methods="8" coveredmethods="8"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
