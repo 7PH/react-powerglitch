@@ -1,6 +1,6 @@
 {
   "name": "react-powerglitch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "types": "./types/lib/index.d.ts",
   "main": "./lib/react-powerglitch.umd.js",
   "module": "./lib/react-powerglitch.es.js",
@@ -22,36 +22,36 @@
     "coverage": "jest --coverage"
   },
   "dependencies": {
-    "powerglitch": "^2.2.0"
+    "powerglitch": "^2.3.2"
   },
   "peerDependencies": {
     "react": ">= 16.8.0",
     "react-dom": ">= 16.8.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.19.1",
-    "@babel/preset-env": "^7.19.1",
-    "@babel/preset-typescript": "^7.18.6",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@types/jest": "^29.0.3",
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
-    "@typescript-eslint/eslint-plugin": "^5.37.0",
-    "@typescript-eslint/parser": "^5.37.0",
-    "@vitejs/plugin-react": "^2.1.0",
-    "babel-jest": "^29.0.3",
-    "eslint": "^8.23.1",
-    "eslint-plugin-react": "^7.31.8",
-    "jest": "^29.0.3",
-    "jest-environment-jsdom": "^29.0.3",
-    "jsdom-testing-mocks": "^1.6.0",
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-typescript": "^7.23.0",
+    "@testing-library/jest-dom": "^6.1.3",
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.5",
+    "@types/react": "^18.2.24",
+    "@types/react-dom": "^18.2.8",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "@vitejs/plugin-react": "^4.1.0",
+    "babel-jest": "^29.7.0",
+    "eslint": "^8.50.0",
+    "eslint-plugin-react": "^7.33.2",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jsdom-testing-mocks": "^1.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "ts-jest": "^29.0.1",
+    "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1",
-    "typedoc": "^0.23.15",
-    "typescript": "^4.8.3",
-    "vite": "^3.1.0"
+    "typedoc": "^0.25.1",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9"
   }
 }
