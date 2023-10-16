@@ -1,6 +1,6 @@
 {
   "name": "react-powerglitch",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "types": "./types/lib/index.d.ts",
   "main": "./lib/react-powerglitch.umd.js",
   "module": "./lib/react-powerglitch.es.js",
@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "dev": "vite --config vite-docs.config.ts",
-    "build": "vite --config vite-docs.config.ts build && npm run coverage && npx typedoc && vite build",
+    "build": "vite --config vite-docs.config.ts build && npm run coverage && npx typedoc && vite build && tsc",
     "preview": "vite preview",
     "test": "jest",
     "coverage": "jest --coverage"
