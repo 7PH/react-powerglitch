@@ -6,6 +6,7 @@
   "module": "./lib/react-powerglitch.es.js",
   "exports": {
     ".": {
+      "types": "./types/lib/index.d.ts",
       "import": "./lib/react-powerglitch.es.js",
       "require": "./lib/react-powerglitch.umd.js"
     }
